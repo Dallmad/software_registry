@@ -1,4 +1,7 @@
+@import '../../common/styles/variables';
+
 .container {
+
   .logo {
     width: 170px;
     height: 40px;
@@ -9,4 +12,7 @@
     bottom: 0;
   }
 
+  .bell svg {
+  fill: $basicColor_1;
+  }
 }

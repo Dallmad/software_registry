@@ -3,7 +3,8 @@ import {NavLink} from 'react-router-dom'
 import {AppRootStateType} from '../../state/store'
 import s from './Header.module.scss'
 import {PATH} from '../Routes/Routes'
-import logo from './../../assets/images/Vector.png'
+import logo from './../../assets/images/logo.svg'
+import bell from './../../assets/images/user_interface/bell.svg'
 import {Input} from '../../components/Input/Input';
 
 export const Header = () => {
@@ -14,7 +15,7 @@ export const Header = () => {
     return (
         <div>
             <div>
-                <img src={logo} alt="logo"/>
+                <img src={logo} alt='logo' className={s.logo}/>
             </div>
             <Input
             placeholder={'Поиск'}
@@ -24,6 +25,9 @@ export const Header = () => {
                 {/*{isLoggedIn && <NavLink to={PATH.MAIN} className={s.link}>Packs List</NavLink>}*/}
                 {!isLoggedIn && <NavLink to={PATH.LOGIN} className={s.link}>Login</NavLink>}
                 {/*<Logout/>*/}
+            </div>
+            <div className={s.bell}>
+                <img src={bell} alt={'bell'}/>
             </div>
         </div>
     )
