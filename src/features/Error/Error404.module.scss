@@ -1,5 +1,7 @@
 .div {
-  display: inline-block;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
   width: 100%;
 }

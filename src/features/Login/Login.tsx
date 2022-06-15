@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navigate} from 'react-router-dom';
+import {Navigate, useNavigate} from 'react-router-dom';
 import s from './Login.module.scss'
 import {useFormik} from 'formik';
 import {useSelector} from 'react-redux';
@@ -9,12 +9,15 @@ import {Input} from '../../components/Input/Input';
 import {Checkbox} from '../../components/Checkbox/Checkbox';
 import {Button} from '../../components/Button/Button';
 import arrowLeft from '../../assets/images/user_interface/arrow-left.svg'
+import {PATH} from '../../app/Routes/Routes';
 
 
 export const Login = () => {
 
     const isLoggedIn = useSelector<AppRootStateType, boolean>(state => state.auth.isLoggedIn)
+
     const dispatch = useTypedDispatch()
+    const navigate = useNavigate()
 
     const formik = useFormik({
         initialValues: {
@@ -42,13 +45,17 @@ export const Login = () => {
         },
     })
 
+    const onClickMainPage = () => {
+        navigate(`${PATH.MAIN}`)
+    }
+
     if (isLoggedIn) {
         return <Navigate to="/"/>
     }
 
     return (
         <div className={s.div}>
-            <div>
+            <div  onClick={onClickMainPage}>
                 <img src={arrowLeft} alt={'arrow-left'}/>
                 <span>Главная</span>
             </div>
@@ -93,7 +100,7 @@ export const Login = () => {
                     <div>
                         У Вас нет аккаунта?
                     </div>
-                    <a href={'ad'}>Нажмите сюда чтобы создать</a>
+                    <a href={'/404'}>Нажмите сюда чтобы создать</a>
                 </div>
             </form>
         </div>
