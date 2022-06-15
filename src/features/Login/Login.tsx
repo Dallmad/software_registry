@@ -8,6 +8,7 @@ import {AppRootStateType, useTypedDispatch} from '../../state/store';
 import {Input} from '../../components/Input/Input';
 import {Checkbox} from '../../components/Checkbox/Checkbox';
 import {Button} from '../../components/Button/Button';
+import arrowLeft from '../../assets/images/user_interface/arrow-left.svg'
 
 
 export const Login = () => {
@@ -47,6 +48,10 @@ export const Login = () => {
 
     return (
         <div className={s.div}>
+            <div>
+                <img src={arrowLeft} alt={'arrow-left'}/>
+                <span>Главная</span>
+            </div>
             <div className={s.title}>Авторизация</div>
             <form onSubmit={formik.handleSubmit}>
                 <div className={s.container}>
@@ -76,6 +81,19 @@ export const Login = () => {
                     <Button type={'submit'}>
                         Вход
                     </Button>
+                    <a href={'ad'}>
+                        Забыли свой пароль?
+                    </a>
+                    <div>
+                        Авторизация с использованием ЕС ИФЮЛ
+                    </div>
+                    <div>
+                        Авторизация с использованием МСИ
+                    </div>
+                    <div>
+                        У Вас нет аккаунта?
+                    </div>
+                    <a href={'ad'}>Нажмите сюда чтобы создать</a>
                 </div>
             </form>
         </div>
