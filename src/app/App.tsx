@@ -5,14 +5,12 @@ import s from './App.module.scss';
 
 
 export const App = () => {
-  return (
-    <>
-      <div>
-        <Header/>
-      </div>
-      <div className={s.routes}>
-        <AppRoutes/>
-      </div>
-    </>
-  )
+    return (
+        <div className={s.app}>
+            <div className={s.box}>
+                <Header/>
+                <AppRoutes/>
+            </div>
+        </div>
+    )
 }

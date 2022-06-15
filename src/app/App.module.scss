@@ -1,3 +1,20 @@
+@import '../common/styles/mixins';
+@import '../common/styles/variables';
+
 /** {
   border: 1px solid red;
 }*/
+.app {
+  width: 1400px;
+  background-color: $extraInterfaceColor_6;
+  margin: 0 auto;
+  height: 100vh;
+
+  .box {
+    margin: 0 auto;
+    width: 1170px;
+  }
+
+  .header {
+  }
+}

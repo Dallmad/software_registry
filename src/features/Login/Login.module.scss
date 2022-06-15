@@ -1,23 +1,22 @@
 @import '../../common/styles/mixins';
 @import '../../common/styles/variables';
 
+.box_arrow {
+  @include flex(row, flex-start, center);
+
+  .arrow {
+    width: 20px;
+    height: 16px;
+  }
+
+  .span_title {
+    @include text(25px, 18px, 500);
+    color: $extraInterfaceColor_1;
+  }
+}
 
 .container {
   @include flex(column, center, center);
-
-  .box_arrow {
-    @include flex(row, left, center);
-
-    .arrow {
-      width: 20px;
-      height: 16px;
-    }
-
-    .span_title {
-      @include text(25px, 18px, 500);
-      color: $extraInterfaceColor_1;
-    }
-  }
 
   .title {
     @include text(49px, 36px, 700);
@@ -45,13 +44,16 @@
           border: 1px solid $basicColor_1;
         }
       }
+
       .checkbox {
 
       }
+
       .checkbox_label {
         @include text(22px, 16px, 500);
         color: $extraInterfaceColor_2;
       }
+
       .button {
         @include flex(row, center, center);
         width: 430px;
@@ -59,48 +61,48 @@
         border: none;
         border-radius: 5px;
         background-color: $basicColor_1;
+        cursor: pointer;
+
         .button_title {
           @include text(25px, 18px, 700);
           letter-spacing: 0.01em;
           color: $basicColor_6;
         }
       }
+
+      .box_link {
+        margin: 0 auto;
+
+        .link {
+          @include text(22px, 16px, 500);
+          letter-spacing: 0.01em;
+          text-decoration-line: underline;
+          color: $basicColor_1;
+
+        }
+      }
+
+      .box_link_auth {
+        @include flex(row, center, center);
+        width: 430px;
+        height: 59px;
+        border: 1px solid $extraInterfaceColor_5;
+        border-radius: 5px;
+        @include text(19px, 14px, 500);
+        text-decoration-line: underline;
+        color: $basicColor_4;
+
+        &:hover {
+          border: 1px solid $basicColor_1;
+          color: $basicColor_1;
+          cursor: pointer;
+        }
+      }
+
+      .question {
+        margin: 0 auto;
+      }
     }
   }
 }
 
-
-/*
-.checkbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.link {
-  font-family: SF UI Display;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #24254A;
-  opacity: 0.80;
-  text-decoration: none;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.forgot {
-  margin-top: 20px;
-}
-
-.link {
-  font-family: SF UI Display;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #24254A;
-  opacity: 0.70;
-  text-decoration: none;
-  cursor: pointer;
-}*/
