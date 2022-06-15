@@ -35,7 +35,7 @@ export const Input: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = `${error ? s.errorInput : s.superInput} ${className}`
 
     return (
-        <>
+        <div className={s.div}>
             <label htmlFor={`${label}`} className={s.label}>{label}</label>
             <input
                 type={'text'}
@@ -47,6 +47,6 @@ export const Input: React.FC<SuperInputTextPropsType> = (
                 {...restProps}
             />
             {error && <span className={finalSpanClassName}>{error}</span>}
-        </>
+        </div>
     )
 }

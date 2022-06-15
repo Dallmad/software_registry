@@ -1,28 +1,76 @@
-.div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@import '../../common/styles/mixins';
+@import '../../common/styles/variables';
 
-.title {
-  font-family: SF UI Display;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #24254A;
-  opacity: 0.70;
-  margin-bottom: 5px;
-}
 
 .container {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
+
+  .box_arrow {
+    @include flex(row, left, center);
+
+    .arrow {
+      width: 20px;
+      height: 16px;
+    }
+
+    .span_title {
+      @include text(25px, 18px, 500);
+      color: $extraInterfaceColor_1;
+    }
+  }
+
+  .title {
+    @include text(49px, 36px, 700);
+    color: $basicColor_5;
+  }
+
+  .form {
+    @include flex(column, center, flex-start);
+    width: 430px;
+    height: 342px;
+    margin-top: 40px;
+
+    .form_container {
+      @include flex(column, center, flex-start);
+
+      .input {
+        padding: 0 18px;
+        width: 394px;
+        height: 56px;
+        background-color: $extraInterfaceColor_4;
+        border-radius: 5px;
+        border: 1px solid $extraInterfaceColor_4;
+
+        &:hover {
+          border: 1px solid $basicColor_1;
+        }
+      }
+      .checkbox {
+
+      }
+      .checkbox_label {
+        @include text(22px, 16px, 500);
+        color: $extraInterfaceColor_2;
+      }
+      .button {
+        @include flex(row, center, center);
+        width: 430px;
+        height: 56px;
+        border: none;
+        border-radius: 5px;
+        background-color: $basicColor_1;
+        .button_title {
+          @include text(25px, 18px, 700);
+          letter-spacing: 0.01em;
+          color: $basicColor_6;
+        }
+      }
+    }
+  }
 }
 
+
+/*
 .checkbox {
   display: flex;
   flex-direction: column;
@@ -55,4 +103,4 @@
   opacity: 0.70;
   text-decoration: none;
   cursor: pointer;
-}
+}*/

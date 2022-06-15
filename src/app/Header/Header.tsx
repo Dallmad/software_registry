@@ -28,10 +28,13 @@ export const Header = () => {
     const onClickUndefinedUser = () => {
         navigate(`${PATH.LOGIN}`)
     }
+    const onClickLogo = () => {
+        navigate(`${PATH.MAIN}`)
+    }
 
     return (
         <div className={s.container}>
-            <img src={logo} alt={'logo'} className={s.logo}/>
+            <img src={logo} alt={'logo'} className={s.logo} onClick={onClickLogo}/>
             <img src={search} alt={'search'}/>
             <Input
                 placeholder={'Поиск'}
