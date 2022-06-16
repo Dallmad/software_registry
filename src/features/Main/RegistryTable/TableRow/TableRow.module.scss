@@ -1,0 +1,12 @@
+@import '../../../../common/styles/mixins';
+@import '../../../../common/styles/variables';
+
+.tr_3 {
+  border-bottom: 1px solid $extraInterfaceColor_5;
+  @include text(22px, 16px, 500);
+  color: $basicColor_4;
+  .link {
+    color: $basicColor_1;
+    text-decoration: underline;
+  }
+}

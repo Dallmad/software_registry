@@ -18,7 +18,10 @@ export const Main = () => {
 
     return (
         <div className={s.container}>
-            <RegistrySearch/>
+            <div className={s.registrySearch}>
+                <RegistrySearch/>
+            </div>
+
             <RegistryTable/>
             <RegistryNews/>
             <QABlock/>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import s from './Paginator.module.css';
+import s from './Paginator.module.scss';
+import {Button} from '../Button/Button';
 
 export const Paginator: React.FC<PaginatorTypeProps> = ({totalCount, pageSize, currentPage, onPageChanged}) => {
 
@@ -20,12 +21,12 @@ export const Paginator: React.FC<PaginatorTypeProps> = ({totalCount, pageSize, c
 
     return (
         <div className={s.container}>
-            <button className={s.button} onClick={() => {
+            <Button className={s.button} onClick={() => {
                 setPortionNumber(portionNumber - 1)
-            }} disabled={portionNumber <= 1}>{'<<'}</button>
-            <button className={s.button} onClick={() => {
+            }} disabled={portionNumber <= 1}>{'<<'}</Button>
+            <Button className={s.button} onClick={() => {
                 setPortionNumber(portionNumber - 1)
-            }} disabled={portionNumber <= 1}>{'<'}</button>
+            }} disabled={portionNumber <= 1}>{'<'}</Button>
             {pages
                 .filter(p => p >= leftPortionNumber && p <= rightPortionNumber)
                 .map((p, i) => {
@@ -35,12 +36,12 @@ export const Paginator: React.FC<PaginatorTypeProps> = ({totalCount, pageSize, c
                         }} className={currentPage === p ? s.selectedPage : s.simplePage}>{p} </span>
                     )
                 })}
-            <button className={s.button} onClick={() => {
+            <Button className={s.button} onClick={() => {
                 setPortionNumber(portionNumber + 1)
-            }} disabled={portionCount <= portionNumber}>{'>'}</button>
-            <button className={s.button} onClick={() => {
+            }} disabled={portionCount <= portionNumber}>{'>'}</Button>
+            <Button className={s.button} onClick={() => {
                 setPortionNumber(portionNumber + 1)
-            }} disabled={portionCount <= portionNumber}>{'>>'}</button>
+            }} disabled={portionCount <= portionNumber}>{'>>'}</Button>
         </div>
     )
 }

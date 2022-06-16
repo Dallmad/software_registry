@@ -83,6 +83,12 @@
       color: $basicColor_1;
     }
   }
-
-
+}
+.hr {
+  border: 1px solid $extraInterfaceColor_5;
+}
+.after_footer {
+  @include text(19px, 14px, 500);
+  color: $extraColor_5;
+  text-align: center;
 }

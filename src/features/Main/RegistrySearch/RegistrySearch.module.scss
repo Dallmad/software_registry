@@ -1,0 +1,61 @@
+@import '../../../common/styles/mixins';
+@import '../../../common/styles/variables';
+
+.container {
+  @include flex(row, space-between, start);
+  margin: 0 auto;
+  width: 1170px;
+
+  .title {
+    text-transform: uppercase;
+    width: 450px;
+    @include text(66px, 48px, 700);
+    color: $basicColor_5;
+  }
+
+  .description {
+    width: 450px;
+    @include text(27px, 18px, 500);
+    color: $extraInterfaceColor_1;
+  }
+
+  .amount {
+    width: 450px;
+    @include text(27px, 18px, 500);
+    color: $extraInterfaceColor_1;
+
+    .number {
+      color: $basicColor_1;
+    }
+  }
+
+  .search {
+    @include flex(row, start, center);
+
+    .input {
+      width: 330px;
+      height: 56px;
+      background: $basicColor_6;
+      border-radius: 5px 0 0 5px;
+      border: none;
+    }
+
+    .button {
+      width: 120px;
+      height: 56px;
+      background: $basicColor_1;
+      border-radius: 0 5px 5px 0;
+      border: none;
+      .span {
+        letter-spacing: 0.01em;
+        @include text(25px, 18px, 500);
+        color: $basicColor_6;
+      }
+    }
+  }
+
+  .img {
+    width: 505px;
+
+  }
+}

@@ -96,19 +96,23 @@ export const RegistryTable = () => {
     /*const sortPacks = useSelector<AppRootStateType, string>(state => state.auth)*/
 
     return (
-        <>
-            <div>
-                Реестры
-                <img src={filter} alt="filter"/>
-                <img src={dots} alt="three-dots"/>
+            <div className={s.container}>
+                <div className={s.table_name}>
+                    <h2 className={s.title}>Реестры</h2>
+                    <div>
+                        <img src={filter} alt='filter' className={s.filter}/>
+                        <img src={dots} alt='three-dots' className={s.dots}/>
+                    </div>
+
+                </div>
                 <table>
                     <thead>
-                    <TableHeader sortPacks={'sortPacks'}/>
+                    <TableHeader sort={'sort'}/>
                     </thead>
                     <tbody>
                     {tableData.map((t, i) =>
                         <TableRow
-                            key={t.id+i}
+                            key={t.id + i}
                             objData={t}
                         />
                     )}
@@ -116,11 +120,10 @@ export const RegistryTable = () => {
                 </table>
                 <Paginator
                     currentPage={1}
-                    onPageChanged={()=>{}}
+                    onPageChanged={() => {}}
                     totalCount={50}
                     pageSize={5}/>
             </div>
-        </>
     )
 }
 
@@ -134,5 +137,5 @@ export type ObjectDataType = {
     link: string
 }
 export type TableDataType = {
-    objData:ObjectDataType
+    objData: ObjectDataType
 }

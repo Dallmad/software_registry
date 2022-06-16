@@ -1,0 +1,33 @@
+@import '../../../common/styles/mixins';
+@import '../../../common/styles/variables';
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+
+  .table_name {
+    @include flex(row, space-between, center);
+
+    .title {
+      @include text(49px, 36px, 700);
+      color: $basicColor_5;
+    }
+    .filter {
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+    }
+    .dots {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  table {
+    border-top: 1px solid $extraInterfaceColor_5;
+    text-align: left;
+
+    th {
+      border-bottom: 1px solid $extraInterfaceColor_5;
+    }
+  }
+}

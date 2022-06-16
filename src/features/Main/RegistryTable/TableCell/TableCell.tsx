@@ -1,9 +1,13 @@
+import s from './TableCell.module.scss'
 
-export const TableCell = ({value}:PropsType) => {
+
+export const TableCell = ({value, className}:PropsType) => {
+
+    const finalClassName = `${ className ? className: s.td}`
 
     return (
         <>
-            <td>{value}</td>
+            <td className={finalClassName}>{value}</td>
         </>
     )
 }
@@ -11,4 +15,5 @@ export const TableCell = ({value}:PropsType) => {
 //types
 type PropsType = {
     value: string
+    className?: string
 }

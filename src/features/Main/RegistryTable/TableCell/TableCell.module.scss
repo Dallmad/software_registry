@@ -1,0 +1,8 @@
+@import '../../../../common/styles/mixins';
+@import '../../../../common/styles/variables';
+
+.td {
+  padding: 20px 0;
+  margin: 20px;
+  border-bottom: 1px solid $extraInterfaceColor_5;
+}

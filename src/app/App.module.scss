@@ -6,14 +6,14 @@
 }*/
 .app {
   width: 1400px;
-  background-color: $extraInterfaceColor_6;
+  background-color: $basicColor_6;
   margin: 0 auto;
   height: 100vh;
 
   .box {
 /*    @include flex(column, center, center);*/
-    margin: 0 auto;
-    width: 1170px;
+/*    margin: 0 auto;
+    width: 1170px;*/
     height: 100%;
   }
 

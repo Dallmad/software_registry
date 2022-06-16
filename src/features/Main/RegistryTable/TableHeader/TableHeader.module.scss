@@ -1,0 +1,21 @@
+@import '../../../../common/styles/mixins';
+@import '../../../../common/styles/variables';
+
+.tr {
+/*  text-align: center;*/
+
+  .th {
+    @include text(22px, 16px, 500);
+    color: $basicColor_1;
+    height: 84px;
+    vertical-align: center;
+    text-align: left;
+
+  }
+  .arrow {
+    transform: rotate(90deg);
+    width: 20px;
+    vertical-align: bottom;
+  }
+
+}
