@@ -1,7 +1,12 @@
-import s from './Main.module.scss';
-import {useSelector} from 'react-redux';
-import {AppRootStateType} from '../../state/store';
-import {Navigate} from 'react-router-dom';
+import s from './Main.module.scss'
+import {useSelector} from 'react-redux'
+import {AppRootStateType} from '../../state/store'
+import {Navigate} from 'react-router-dom'
+import {RegistrySearch} from './RegistrySearch/RegistrySearch';
+import {RegistryTable} from './RegistryTable/RegistryTable';
+import {RegistryNews} from './RegistryNews/RegistryNews';
+import {QABlock} from './Q&A/QABlock';
+import {Documents} from './Documents/Documents';
 
 export const Main = () => {
 
@@ -12,8 +17,12 @@ export const Main = () => {
     }
 
     return (
-        <div className={s.div} >
-            <div>Реестр программного обеспечения</div>
+        <div className={s.container}>
+            <RegistrySearch/>
+            <RegistryTable/>
+            <RegistryNews/>
+            <QABlock/>
+            <Documents/>
         </div>
     )
 }

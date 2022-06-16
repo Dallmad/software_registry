@@ -17,6 +17,7 @@
 
 .container {
   @include flex(column, center, center);
+  height: 650px;
 
   .title {
     @include text(49px, 36px, 700);
@@ -56,8 +57,8 @@
 
       .button {
         @include flex(row, center, center);
-        width: 430px;
-        height: 56px;
+        width: 432px;
+        height: 58px;
         border: none;
         border-radius: 5px;
         background-color: $basicColor_1;
@@ -67,6 +68,14 @@
           @include text(25px, 18px, 700);
           letter-spacing: 0.01em;
           color: $basicColor_6;
+        }
+
+        &:hover {
+          background-color: #01B8D5;
+        }
+
+        &:active {
+          background-color: #01BEDB;
         }
       }
 
