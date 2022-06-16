@@ -2,6 +2,87 @@
 @import '../../common/styles/mixins';
 
 .container {
+  @include flex(row, space-between, start);
 
-/*      @include flex(column, end, start);*/
+  .name {
+    @include flex(column, center, start);
+    width: 360px;
+
+    .logo {
+      width: 170px;
+      height: 40px;
+    }
+
+    .firstName {
+      @include text(21px, 14px, 500);
+      color: $extraInterfaceColor_1;
+    }
+
+    .dev {
+      @include text(22px, 16px, 600);
+      color: $basicColor_4;
+    }
+
+    .secondName {
+      @include text(19px, 14px, 500);
+      color: $extraInterfaceColor_1;
+    }
+
+    .address {
+      @include text(19px, 14px, 500);
+      color: $extraInterfaceColor_2;
+    }
+  }
+
+  .information {
+    @include flex(column, center, start);
+
+    .title {
+      @include text(25px, 18px, 700);
+      color: $basicColor_5;
+    }
+
+    .link {
+      @include text(19px, 14px, 500);
+      color: $basicColor_4;
+      text-decoration: none;
+    }
+  }
+
+  .support {
+    width: 270px;
+    @include flex(column, center, start);
+
+    .title {
+      @include text(25px, 18px, 700);
+      color: $basicColor_5;
+    }
+
+    .time {
+      @include text(21px, 14px, 500);
+      color: $extraInterfaceColor_1;
+    }
+
+    .phone {
+      @include text(19px, 14px, 500);
+      color: $basicColor_4;
+    }
+  }
+  .contacts {
+    width: 270px;
+    .title {
+      @include text(25px, 18px, 700);
+      color: $basicColor_5;
+    }
+    .phone {
+      @include text(19px, 14px, 500);
+      color: $basicColor_4;
+    }
+    .link {
+      @include text(19px, 14px, 500);
+      color: $basicColor_1;
+    }
+  }
+
+
 }
