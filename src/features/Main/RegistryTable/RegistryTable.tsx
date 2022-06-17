@@ -6,6 +6,7 @@ import {AppRootStateType} from '../../../state/store';
 import {TableHeader} from './TableHeader/TableHeader';
 import {TableRow} from './TableRow/TableRow';
 import {Paginator} from '../../../components/Paginator/Paginator';
+import {useEffect} from 'react';
 
 const tableData = [
     {
@@ -93,37 +94,74 @@ const tableData = [
 
 export const RegistryTable = () => {
 
-    /*const sortPacks = useSelector<AppRootStateType, string>(state => state.auth)*/
+    const sort = useSelector<AppRootStateType, string>(state => state.main.sort)
+    const searchName = useSelector<AppRootStateType, string>(state => state.main.name)
+
+    const filteredTableData = tableData.filter(el => el.nameProgram.toLowerCase().indexOf(searchName.toLowerCase()) !== -1)
+
+    //sorter
+    sort === '0id' ? tableData.sort((a, b) => {
+            if (a.id.toLowerCase().slice(1) > b.id.toLowerCase().slice(1)) return -1
+            if (a.id.toLowerCase().slice(1) < b.id.toLowerCase().slice(1)) return 1
+            return 0
+        }) :
+        sort === '0name'? tableData.sort((a, b) => {
+            if (a.nameProgram.toLowerCase() > b.nameProgram.toLowerCase()) return 1
+            if (a.nameProgram.toLowerCase() < b.nameProgram.toLowerCase()) return -1
+            return 0
+        }) :
+            sort === '1id'? tableData.sort((a, b) => {
+                if (a.id.toLowerCase().slice(1) > b.id.toLowerCase().slice(1)) return 1
+                if (a.id.toLowerCase().slice(1) < b.id.toLowerCase().slice(1)) return -1
+                    return 0
+                }) : tableData.sort((a, b) => {
+                        if (a.nameProgram.toLowerCase() > b.nameProgram.toLowerCase()) return -1
+                        if (a.nameProgram.toLowerCase() < b.nameProgram.toLowerCase()) return 1
+                        return 0
+                    })
+
+    useEffect(() => {
+    }, [sort,searchName])
 
     return (
-            <div className={s.container}>
-                <div className={s.table_name}>
-                    <h2 className={s.title}>Реестры</h2>
-                    <div>
-                        <img src={filter} alt='filter' className={s.filter}/>
-                        <img src={dots} alt='three-dots' className={s.dots}/>
-                    </div>
-
+        <div className={s.container}>
+            <div className={s.table_name}>
+                <h2 className={s.title}>Реестры</h2>
+                <div>
+                    <img src={filter} alt="filter" className={s.filter}/>
+                    <img src={dots} alt="three-dots" className={s.dots}/>
                 </div>
-                <table>
-                    <thead>
-                    <TableHeader sort={'sort'}/>
-                    </thead>
+
+            </div>
+            <table>
+                <thead>
+                <TableHeader/>
+                </thead>
+                {searchName ?
+                    <tbody>
+                    {filteredTableData.map((t, i) =>
+                        <TableRow
+                            key={t.id + i}
+                            objData={t}
+                        />)}
+                    </tbody>
+                    :
                     <tbody>
                     {tableData.map((t, i) =>
                         <TableRow
                             key={t.id + i}
                             objData={t}
-                        />
-                    )}
+                        />)}
                     </tbody>
-                </table>
-                <Paginator
-                    currentPage={1}
-                    onPageChanged={() => {}}
-                    totalCount={50}
-                    pageSize={5}/>
-            </div>
+                }
+            </table>
+            <Paginator
+                currentPage={1}
+                onPageChanged={() => {
+                }}
+                totalCount={50}
+                pageSize={5}/>
+        </div>
     )
 }
 

@@ -2,9 +2,8 @@ import React from 'react'
 import {Navigate, useNavigate} from 'react-router-dom';
 import s from './Login.module.scss'
 import {useFormik} from 'formik';
-import {useSelector} from 'react-redux';
-import {AppRootStateType, useTypedDispatch} from '../../state/store';
-//import {login} from '../../state/auth-reducer';
+import {useDispatch, useSelector} from 'react-redux';
+import {AppRootStateType} from '../../state/store';
 import {Input} from '../../components/Input/Input';
 import {Checkbox} from '../../components/Checkbox/Checkbox';
 import {Button} from '../../components/Button/Button';
@@ -17,7 +16,7 @@ export const Login = () => {
 
     const isLoggedIn = useSelector<AppRootStateType, boolean>(state => state.auth.isLoggedIn)
 
-    const dispatch = useTypedDispatch()
+    const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const formik = useFormik({

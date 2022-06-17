@@ -5,18 +5,17 @@ import bookmark from '../../../assets/images/user_interface/note-bookmark.svg'
 import paper from '../../../assets/images/user_interface/paper.svg'
 import lock from '../../../assets/images/user_interface/lock-closed-II.svg'
 import download from '../../../assets/images/user_interface/download.svg'
-import logout from '../../../assets/images/user_interface/logout.svg'
 import {Button} from '../../../components/Button/Button';
 import {useNavigate} from 'react-router-dom';
 import {setIsLoggedIn} from '../../../state/auth-reducer';
-import {useTypedDispatch} from '../../../state/store';
+import {useDispatch} from 'react-redux';
 
 
 
 export const NavBar = () => {
 
     const navigate = useNavigate()
-    const dispatch = useTypedDispatch()
+    const dispatch = useDispatch()
 
     const dataButton = [
         {name:'Мои данные', logo: undefinedUser, onclick:''},

@@ -2,8 +2,20 @@ import s from './RegistrySearch.module.scss'
 import {Input} from '../../../components/Input/Input'
 import {Button} from '../../../components/Button/Button'
 import img_1 from '../../../assets/images/img_1.svg'
+import {useState} from 'react';
+import {setSearchAC} from '../../../state/main-reducer';
+import {useDispatch} from 'react-redux';
 
 export const RegistrySearch = () => {
+
+    const dispatch = useDispatch()
+
+    const [search, setSearch] = useState<string>( '')
+
+    const searchPacksHandler = () => {
+        dispatch(setSearchAC(search))
+    }
+
   return (
       <>
           <div className={s.container}>
@@ -21,9 +33,19 @@ export const RegistrySearch = () => {
                       <span className={s.number}> 4 272</span>
                   </div>
                   <div className={s.search}>
-                      <Input className={s.input} placeholder={'Искать реестр'}/>
-                      <Button className={s.button}>
-                          <span className={s.span}>Искать</span>
+                      <Input
+                          value={search}
+                          className={s.input}
+                          placeholder={'Искать реестр'}
+                          onChange={(e) => setSearch(e.currentTarget.value)}
+                      />
+                      <Button
+                          className={s.button}
+                          onClick={searchPacksHandler}
+                      >
+                          <span className={s.span}>
+                              Искать
+                          </span>
                       </Button>
                   </div>
               </div>
