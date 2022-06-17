@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/software_registry/static/css/main.c5086aa7.css",
-    "main.js": "/software_registry/static/js/main.5f69e73d.js",
+    "main.css": "/software_registry/static/css/main.fa270ed9.css",
+    "main.js": "/software_registry/static/js/main.2926b288.js",
     "static/js/787.4148fc37.chunk.js": "/software_registry/static/js/787.4148fc37.chunk.js",
     "static/media/img_1.svg": "/software_registry/static/media/img_1.01eefd02346981321e2e6f234b6f4b09.svg",
+    "static/media/foto.svg": "/software_registry/static/media/foto.46990a9f47987238c6cbf8785032802e.svg",
+    "static/media/tests.svg": "/software_registry/static/media/tests.4aa0fd550372ba783a710136478e7406.svg",
+    "static/media/attention.svg": "/software_registry/static/media/attention.c8f7e50be47df462bee90622987c6127.svg",
+    "static/media/update.svg": "/software_registry/static/media/update.6c19e7e10d17cf0b99986c07e7983b6e.svg",
+    "static/media/techWorks.svg": "/software_registry/static/media/techWorks.02277695e49dcd21784e1a8e1f804619.svg",
     "static/media/user.svg": "/software_registry/static/media/user.75a95697a09e21dcebb70e2cab74b316.svg",
     "static/media/logo.svg": "/software_registry/static/media/logo.00fb538c4e6735d29461f07dbfc84c64.svg",
     "static/media/notes-calendar.svg": "/software_registry/static/media/notes-calendar.dbe896ac16f0a7c7f5fb6d8568bc1e09.svg",
     "static/media/filter.svg": "/software_registry/static/media/filter.ee052b6ee8335a44cc219d3026503714.svg",
+    "static/media/arrow-left-right.svg": "/software_registry/static/media/arrow-left-right.2141482c246da1af3d3d5ed6065b4424.svg",
     "static/media/bell.svg": "/software_registry/static/media/bell.8cf506e33a069885e62150ec06c5704f.svg",
     "static/media/download.svg": "/software_registry/static/media/download.b2dbe7338a141a689b3984fc0d1ca6e0.svg",
     "static/media/lock-closed-II.svg": "/software_registry/static/media/lock-closed-II.7bc888d721a756dd64e8486912ca421d.svg",
@@ -20,12 +26,12 @@
     "static/media/paper.svg": "/software_registry/static/media/paper.931a7246edd52498c3892b96df36eb50.svg",
     "static/media/arrow-left.svg": "/software_registry/static/media/arrow-left.f720e94c7f9a827ae1ccecc0372a5c17.svg",
     "static/media/line.svg": "/software_registry/static/media/line.4f4e4ad20974fada819a8c72ec4e4cc4.svg",
-    "main.c5086aa7.css.map": "/software_registry/static/css/main.c5086aa7.css.map",
-    "main.5f69e73d.js.map": "/software_registry/static/js/main.5f69e73d.js.map",
+    "main.fa270ed9.css.map": "/software_registry/static/css/main.fa270ed9.css.map",
+    "main.2926b288.js.map": "/software_registry/static/js/main.2926b288.js.map",
     "787.4148fc37.chunk.js.map": "/software_registry/static/js/787.4148fc37.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5086aa7.css",
-    "static/js/main.5f69e73d.js"
+    "static/css/main.fa270ed9.css",
+    "static/js/main.2926b288.js"
   ]
 }
