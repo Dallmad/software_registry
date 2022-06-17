@@ -1,3 +1,70 @@
 @import '../../../common/styles/mixins';
 @import '../../../common/styles/variables';
 
+.container {
+  margin: 0 auto;
+  width: 1170px;
+  @include flex(column, flex-start, center);
+
+  .title {
+    @include text(49px, 36px, 700);
+    color: $basicColor_5;
+  }
+
+  .container_small {
+
+    .box {
+      @include flex(row, space-between, start);
+      flex-wrap: wrap;
+      .box_small {
+        width: 370px;
+
+        .img {
+          margin: 5px 0;
+          width: 370px;
+        }
+
+        .second_title {
+          margin: 5px 0;
+          @include text(25px, 18px, 600);
+          color: $basicColor_5;
+        }
+
+        .data {
+          @include text(19px, 14px, 500);
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          color: $extraInterfaceColor_2;
+
+          .data_img {
+            width: 18px;
+            margin: 0 10px 0 0;
+            opacity: 0.6;
+          }
+        }
+
+        .description {
+          margin: 5px 0;
+          @include text(24px, 16px, 500);
+          color: $extraInterfaceColor_1;
+          text-wrap: normal;
+        }
+      }
+    }
+  }
+  .button {
+    margin: 20px 0;
+    background: $basicColor_1;
+    border-radius: 5px;
+    width: 270px;
+    height: 56px;
+    border: none;
+    cursor: pointer;
+
+    .span {
+      @include text(25px, 18px, 700);
+      color: $basicColor_6;
+    }
+  }
+}

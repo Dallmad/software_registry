@@ -41,7 +41,7 @@ export const Login = () => {
         },
         onSubmit: values => {
             dispatch(setIsLoggedIn(true))
-            //formik.resetForm()
+            formik.resetForm()
         },
     })
 

@@ -52,7 +52,7 @@ export const Header = () => {
                     <img src={bell} alt={'bell'}/>
                     <img src={line} alt={'line'}/>
                     <img src={avatar} alt={'avatar'}/>
-                    <span onClick={onClickUserName}>{userName}</span>
+                    <span onClick={onClickUserName} className={s.span}>{userName}</span>
                 </>
                 :
                 <>

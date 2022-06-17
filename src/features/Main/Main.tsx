@@ -23,7 +23,9 @@ export const Main = () => {
             </div>
 
             <RegistryTable/>
+            <div className={s.registrySearch}>
             <RegistryNews/>
+            </div>
             <QABlock/>
             <Documents/>
         </div>
