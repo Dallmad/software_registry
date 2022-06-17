@@ -91,7 +91,6 @@ const tableData = [
     },
 ]
 
-
 export const RegistryTable = () => {
 
     const sort = useSelector<AppRootStateType, string>(state => state.main.sort)
